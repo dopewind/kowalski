@@ -1,5 +1,6 @@
 # Imports
-import discord  # duh
+import discord
+from discord import message  # duh
 from discord.ext import commands
 import os
 import logging
@@ -24,13 +25,15 @@ class theClient(discord.Client):
 
     async def on_message(self, message):
         # don't respond to ourselves
+        message.content = message.content.lower()
+
         if message.author == self.user:
             return
 
         if message.content == 'ping':
             await message.channel.send('pong')
 
-        if message.content == 'iss':
+        if message.content == 'where iss':
             await message.channel.send(get_iss())
 
 

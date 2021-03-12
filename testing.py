@@ -10,6 +10,3 @@ def get_iss():
     return_text = "The ISS is at latitude " + \
         latitude + " and longitude " + longitude
     return return_text
-
-
-print(get_iss())
