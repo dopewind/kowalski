@@ -1,4 +1,4 @@
-# apollo
+# kowalski
 
 - `pip install -r requirements.txt `
 
