@@ -4,9 +4,10 @@ from discord.ext import commands
 import os
 import logging
 
-
+from testing import get_iss
 # env varables
 discord_token = os.getenv('discord_token')
+
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -28,6 +29,9 @@ class theClient(discord.Client):
 
         if message.content == 'ping':
             await message.channel.send('pong')
+
+        if message.content == 'iss':
+            await message.channel.send(get_iss())
 
 
 client = theClient()
