@@ -22,8 +22,5 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
-  },
-  "devDependencies": {
-    "prettier-config-standard": "^4.0.0"
   }
 }
