@@ -1,0 +1,24 @@
+{
+  "name": "kowalski",
+  "version": "1.0.0",
+  "description": "kowalski bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dopewind/kowalski.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dopewind/kowalski/issues"
+  },
+  "homepage": "https://github.com/dopewind/kowalski#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}

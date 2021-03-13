@@ -1,5 +1,6 @@
 # kowalski
 
-- `pip install -r requirements.txt `
-
+- `npm install`
+  
+  
 gitmoji-hook initiated
