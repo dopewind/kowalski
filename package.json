@@ -2,7 +2,7 @@
   "name": "kowalski",
   "version": "1.0.0",
   "description": "kowalski bot",
-  "main": "index.js",
+  "main": "src/bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/bot.js",
@@ -22,5 +22,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "prettier-config-standard": "^4.0.0"
   }
 }
