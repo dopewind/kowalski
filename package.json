@@ -1,6 +1,6 @@
 {
   "name": "kowalski",
-  "version": "0.1.1",
+  "version": "v0.1.1",
   "description": "kowalski bot",
   "main": "src/bot.js",
   "scripts": {
