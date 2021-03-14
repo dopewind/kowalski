@@ -27,33 +27,28 @@ client.on('ready', () => {
 // event -- message
 
 client.on('message', async (message) => {
-  // returns if it detects bot msg
+  // ignores own bot messages
   if (message.author.bot) return;
-  // check for prefix
+  // checks for prefix
   if (message.content.startsWith(PREFIX)) {
     const [CMD_NAME, ...args] = message.content
       .trim()
       .substring(PREFIX.length)
       .split(/\s+/);
-
     // kick
     if (CMD_NAME === 'kick') {
       if (!message.member.hasPermission('KICK_MEMBERS'))
         return message.reply('You do not have permissions to use that command');
       if (args.length === 0) return message.reply('Please provide an ID');
       const member = message.guild.members.cache.get(args[0]);
-      console.log(member);
       if (member) {
         member
           .kick()
           .then((member) => message.channel.send(`${member} was kicked.`))
-          .catch(() => {
-            return message.channel.send('I cannot kick that user :(');
-          });
+          .catch(() => message.channel.send('I cannot kick that user :('));
       } else {
         message.channel.send('That member was not found');
       }
-
       // ban
     } else if (CMD_NAME === 'ban') {
       if (!message.member.hasPermission('BAN_MEMBERS'))
@@ -68,11 +63,6 @@ client.on('message', async (message) => {
           'An error occured. Either I do not have permissions or the user was not found'
         );
       }
-    } else if (CMD_NAME === 'announce') {
-      console.log(args);
-      const msg = args.join(' ');
-      console.log(msg);
-      webhookClient.send(msg);
     }
   }
 });
