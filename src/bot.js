@@ -36,6 +36,7 @@ client.on('message', async (message) => {
       .substring(PREFIX.length)
       .split(/\s+/);
     // kick
+    //
     if (CMD_NAME === 'kick') {
       if (!message.member.hasPermission('KICK_MEMBERS'))
         return message.reply('You do not have permissions to use that command');
@@ -50,6 +51,7 @@ client.on('message', async (message) => {
         message.channel.send('That member was not found');
       }
       // ban
+      //
     } else if (CMD_NAME === 'ban') {
       if (!message.member.hasPermission('BAN_MEMBERS'))
         return message.reply('You do not have permissions to use that command');
@@ -63,6 +65,10 @@ client.on('message', async (message) => {
           'An error occured. Either I do not have permissions or the user was not found'
         );
       }
+    } else if (CMD_NAME === 'yeet') {
+      message.channel.reply('yeeeeeeeeeeeeeeeeeeeeeeeeet');
+    } else if (CMD_NAME === 'scream') {
+      message.channel.reply('aaaaaaaaaaaaaaaaaaaaaa');
     }
   }
 });
